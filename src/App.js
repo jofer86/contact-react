@@ -23,9 +23,9 @@ export default class App extends Component {
   render() {
     console.log(this.state)
     return (
-      <div className="wrapper1">
-        <CreateContact refresh = {this.get}/>
-        <Contact refresh= {this.get} contacts = {this.state.contacts} />
+      <div className="wrapper1">        
+        <Contact  contacts = {this.state.contacts} />
+        <CreateContact/>
       </div>
     )
   }

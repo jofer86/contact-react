@@ -45,33 +45,50 @@ class CreateContact extends Component{
         const { firstname, lastname, email, phonenumber } = this.state;
         return (
             <form onSubmit={this.submitHandler}>
-                <div className="wrapper1">
-                    <input 
-                        type="text"
-                        name="firstname" 
-                        value={firstname} 
-                        onChange={this.changeHandler}
-                    />
-                    <input 
-                        type="text"
-                        name="lastname"
-                        value={lastname}
-                        onChange={this.changeHandler}
-                    />
-                    <input 
-                        type="email"
-                        name="email"
-                        value={email}
-                        onChange={this.changeHandler}
-                    />
-                    <input 
-                        type="number"
-                        name="phonenumber"
-                        value={phonenumber}
-                        onChange={this.changeHandler}
-                    />
+                <div className="form-row d-flex justify-content-around">
+                    <div className="col-2">
+                        <input 
+                            type="text"
+                            name="firstname"
+                            value={ firstname }
+                            className="form-control"
+                            placeholder="First Name"
+                            onChange={ this.changeHandler }
+                        />
+                    </div>
+                    <div className="col-2">
+                        <input 
+                            type="text"
+                            name="lastname"
+                            value={ lastname }
+                            className="form-control"
+                            placeholder="Last Name"
+                            onChange={ this.changeHandler }
+                        />
+                    </div>
+                    <div className="col-2">
+                        <input 
+                            type="email"
+                            name="email"
+                            value={ email }
+                            className="form-control"
+                            placeholder="Email"
+                            onChange={ this.changeHandler }
+                        />
+                    </div>
+                    <div className="col-2">
+                        <input 
+                            type="number"
+                            name="phonenumber"
+                            value={ phonenumber }
+                            className="form-control"
+                            placeholder="Phone Number"
+                            onChange={ this.changeHandler }
+                        />
+                    </div>
+                    <button className="btn btn-primary col-2"type="submit">Submit</button>                    
                 </div>
-                <button type="submit">Submit</button>
+                
             </form>
         )
     }
