@@ -17,14 +17,19 @@ export default class App extends Component {
   componentDidMount() {
     this.get();
   }
+  
+  kill = (e) => {
+    axios.delete(`http://localhost:3000/contacts/${ e.target.value }`)
+    window.location.reload();
+  }
 
-
-
-  render() {
-    console.log(this.state)
+  render() {    
     return (
       <div className="wrapper1">        
-        <Contact  contacts = {this.state.contacts} />
+        <Contact  
+          contacts = {this.state.contacts}
+          kill= { this.kill }
+        />
         <CreateContact/>
       </div>
     )
