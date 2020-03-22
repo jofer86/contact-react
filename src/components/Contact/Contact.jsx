@@ -3,12 +3,6 @@ import './contact.scss';
 
 const Contact = ({ contacts, kill }) => {
   let k = 0;
-  const hide = (e) => {
-    let body = document.querySelector('.card-body');
-    let btn = document.querySelector('.btn-warning');
-    btn.id='hide';
-    body.id='hide';
-  }
   return (
     <div>
       <center><h1>Contact List</h1></center>
@@ -30,8 +24,7 @@ const Contact = ({ contacts, kill }) => {
 
               <div className="card-footer">
                 <button className="btn btn-danger" onClick={ kill } value={contact.id}>Destroy!</button>
-                <button className="btn btn-warning" onClick={ hide } id=''> Edit </button>
-                <button className="btn">Edit!</button>
+
               </div>
               
             </div>
